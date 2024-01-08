@@ -155,20 +155,46 @@ body {
 
 @media screen and (max-width: 768px) {
   .sinistra {
-    left: 0%;
-    font-size: large;
-    font-weight: bold;
+    display: none;
   }
 
   .linea-verticale {
-    left: 30%;
+    left: 95%;
   }
 
   .destra {
-    left: 37%!important;
-    max-width: 60%;
+    left: 0!important;
+    max-width: 87%;
     margin-right: 0px!important;
     font-size: medium!important;
   }
+
+  .destra iframe {
+    width: 100%!important;
+  }
+
+  #please-scroll {
+    display: none;
+  }
+
+  #please-scroll img {
+    width: 20px!important;
+  }
+
+#footer .punto p {
+  font-size:smaller!important;
+}
+
+  .ready {
+    font-size: 12px!important;
+    left: 0px!important;
+  }
+
+  .ready-transition {
+    font-size: 12px!important;
+    left: 0px!important;
+    margin-left: -120px;
+  }
+  
 }
 
