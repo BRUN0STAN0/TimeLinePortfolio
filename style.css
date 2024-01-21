@@ -198,3 +198,231 @@ body {
   
 }
 
+
+.carousel {
+  position: relative; display: flex; gap: 30px; justify-content: center; align-items: center;
+  animation: circular 5s infinite linear;
+
+}
+
+.carousel2 {
+  position: relative; display: flex; gap: 30px; justify-content: center; align-items: center;
+  animation: circular-reverse 5s infinite linear;
+
+}
+
+.carousel3 {
+  position: relative; display: flex; gap: 30px; justify-content: center; align-items: center;
+  animation: circular2 5s infinite linear;
+
+}
+
+.carousel4 {
+  position: relative; display: flex; gap: 30px; justify-content: center; align-items: center;
+  animation: circular-reverse2 5s infinite linear;
+
+}
+
+@keyframes circular-reverse{
+  0%{
+    transform:rotate(0deg)
+              translate(-75px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(-360deg)
+              translate(-75px)
+              rotate(360deg);
+  }
+}
+
+@keyframes circular{
+  0%{
+    transform:rotate(0deg)
+              translate(-225px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-225px)
+              rotate(-360deg);
+  }
+}
+
+@keyframes circular2{
+  0%{
+    transform:rotate(0deg)
+              translate(-105px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(-360deg)
+              translate(-105px)
+              rotate(360deg);
+  }
+}
+
+@keyframes circular-reverse2{
+  0%{
+    transform:rotate(0deg)
+              translate(-235px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-235px)
+              rotate(-360deg);
+  }
+}
+
+
+
+
+
+/* disegna una linea circolare del movimento che segue */
+.carousel::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px dotted #7c7c7c;
+  top: 10%;
+  left: 10%;
+  animation: circular 5s infinite alternate-reverse ;
+}
+
+
+.carousel2::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid #878787;
+  top: 10%;
+  left: 10%;
+  animation: circular-reverse 5s infinite alternate-reverse
+}
+
+.carousel3::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid #878787;
+  top: 10%;
+  left: 10%;
+  animation: circular 5s infinite alternate-reverse
+}
+
+.carousel4::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid #878787;
+  top: 10%;
+  left: 10%;
+  animation: circular-reverse 5s infinite alternate-reverse
+}
+
+
+.carousel img {
+  width: 100px; height: 100px; filter: drop-shadow(10px 10px  rgba(255, 255, 255, 0.19)); background: #292929; border-radius: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.carousel2 img {
+  width: 100px; height: 100px; filter: drop-shadow(10px 10px  rgba(255, 255, 255, 0.19)); background: #292929; border-radius: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.carousel3 img {
+  width: 0px; height: 0px; filter: drop-shadow(10px 10px  rgba(255, 255, 255, 0.19)); background: #292929; border-radius: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.carousel4 img {
+  width: 0px; height:0px; filter: drop-shadow(10px 10px  rgba(255, 255, 255, 0.19)); background: #292929; border-radius: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* crea codice solo per le immagini dispari */
+.carousel img {
+  animation: vibration 1s infinite linear;
+  
+}
+
+.carousel2 img {
+  animation: vibration2 0.8s infinite linear;
+}
+
+
+.carousel3 img {
+  animation: vibration 1s infinite linear;
+  
+}
+
+.carousel4 img {
+  animation: vibration2 0.8s infinite linear;
+}
+
+@keyframes vibration{
+  0%{
+    transform:translate(0px,5px) scale(1);
+  }
+  25%{
+    transform:translate(4px,0px) scale(1.2);
+    filter: drop-shadow(-5px 5px  rgba(255, 255, 255, 0.962));
+  }
+  50%{
+    transform:translate(0px,-5px) scale(1);
+  }
+  75%{
+    transform:translate(-4px,0px) scale(1.2);
+    filter: drop-shadow(-5px -5px  rgba(255, 255, 255, 0.962));
+  }
+}
+
+
+@keyframes vibration2{
+  0%{
+    transform:translate(0px,-5px) scale(1);
+  }
+  25%{
+    transform:translate(-4px,0px) scale(1.2);
+    filter: drop-shadow(5px -5px  rgba(255, 255, 255, 0.962));
+  }
+  50%{
+    transform:translate(0px,5px) scale(1);
+  }
+  75%{
+    transform:translate(4px,0px) scale(1.2);
+    filter: drop-shadow(5px 5px  rgba(255, 255, 255, 0.962));
+  }
+}
+
+
+/* quando le due immagini si toccano */
+.carousel img:hover {
+  animation-play-state: paused;
+}
+
+.carousel2 img:hover {
+  animation-play-state: paused;
+
+}
+
+.carousel3 img:hover {
+  animation-play-state: paused;
+
+}
+
+.carousel4 img:hover {
+  animation-play-state: paused;
+
+}
